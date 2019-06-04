@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.huarongdao.MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:id="@+id/step"
+            android:layout_width="194dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/textview_border"
+            android:text="Step"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/time" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="193dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/textview_border"
+            android:text="Time"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <AbsoluteLayout
+        android:id="@+id/Qp"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <Button
+            android:id="@+id/Qz1"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/role_soldier1" />
+
+        <Button
+            android:id="@+id/Qz2"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/role_soldier2" />
+
+        <Button
+            android:id="@+id/Qz3"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/role_soldier3" />
+
+        <Button
+            android:id="@+id/Qz4"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/role_soldier4" />
+
+        <Button
+            android:id="@+id/Qz5"
+            android:layout_width="95dp"
+            android:layout_height="190dp"
+            android:background="@drawable/role_huangzhong" />
+
+        <Button
+            android:id="@+id/Qz6"
+            android:layout_width="95dp"
+            android:layout_height="190dp"
+            android:background="@drawable/role_machao" />
+
+        <Button
+            android:id="@+id/Qz7"
+            android:layout_width="95dp"
+            android:layout_height="190dp"
+            android:background="@drawable/role_zhaoyun" />
+
+        <Button
+            android:id="@+id/Qz8"
+            android:layout_width="95dp"
+            android:layout_height="190dp"
+            android:background="@drawable/role_zhangfei" />
+
+        <Button
+            android:id="@+id/Qz9"
+            android:layout_width="190dp"
+            android:layout_height="95dp"
+            android:background="@drawable/role_guanyu" />
+
+        <Button
+            android:id="@+id/Qz10"
+            android:layout_width="190dp"
+            android:layout_height="190dp"
+            android:background="@drawable/role_caocao" />
+
+    </AbsoluteLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="音效"
+            android:onClick="switchVoice"
+            app:layout_constraintBaseline_toBaselineOf="@+id/select"
+            app:layout_constraintEnd_toStartOf="@+id/back"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/select" />
+
+        <Button
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="选关"
+            android:onClick="selectLevel"
+            app:layout_constraintEnd_toStartOf="@+id/voice"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="重置"
+            android:onClick="reSet"
+            app:layout_constraintBaseline_toBaselineOf="@+id/voice"
+            app:layout_constraintEnd_toStartOf="@+id/screen_shot"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/voice" />
+
+        <Button
+            android:id="@+id/screen_shot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="截图"
+            android:onClick="screenShot"
+            app:layout_constraintBaseline_toBaselineOf="@+id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/back" />
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+</LinearLayout>
